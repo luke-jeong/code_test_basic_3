@@ -1,4 +1,4 @@
-  
+ 
     /*방법 1
     boolean Prime(int num){
 
@@ -65,33 +65,33 @@
     }
     */
 
-import java.util.Scanner;
+    import java.util.Scanner;
 
-public class baek1978{
-    public static void main(String[] args) {
-      
-        //방법 2로 풀이
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int cnt = 0;
-
-        for(int i = 0; i<N; i++){
-            boolean isPrime = true;
-
-            int num = sc.nextInt();
-            if(num == 1){
-                continue;
-            }
-            for(int j = 2; j<=Math.sqrt(num); j++){
-                if(num%j == 0){
-                    isPrime = false;
-                    break;
+    public class baek1978{
+        public static void main(String[] args) {
+          
+            //방법 2로 풀이
+            Scanner sc = new Scanner(System.in);
+            int N = sc.nextInt();
+            int cnt = 0;
+    
+            for(int i = 0; i<N; i++){
+                boolean isPrime = true;
+    
+                int num = sc.nextInt();
+                if(num == 1){
+                    continue;
+                }
+                for(int j = 2; j<=Math.sqrt(num); j++){
+                    if(num%j == 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    cnt++;
                 }
             }
-            if(isPrime){
-                cnt++;
-            }
+            System.out.println(cnt);
         }
-        System.out.println(cnt);
     }
-}
